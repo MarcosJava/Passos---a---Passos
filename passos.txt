@@ -1,0 +1,123 @@
+=============Configurar o seu GIT :===================
+	
+git config –-global user.name Marcos
+git config --global user.email mfelipesp@gmail.com
+
+============ Montando Repositorio ====================
+git init 
+
+============ Verificar status dos arquivos ===========
+--informa o status do repositorio, oq ainda não esta commitado , oq esta desatualizado , oq não foi adicionado
+
+git status 
+
+=========== Fazendo Commit Local ================
+
+git add Arquivo.txt   [/modo storage
+git commit -m "Esse é o primeiro commit" [/commit local
+
+============ Removendo arquivo do repositorio =====
+
+git rm script.sql
+git commit -m "removido o arquivo"
+
+=========== Saber as mudanças do arquivo ou do repositorio =========
+
+git diff ==> mostra as mudanças.
+git diff --stage ==> controle de versao.
+
+========== Historico do Git =======================================
+
+git log ==> mostra tudo o que foi feito no GIT.
+git log --pretty=oneline   ==> tudo em uma linha.
+git log -p -2  ==> ultimas duas ações.
+git log --pretty=format:"%H - %an : %s (%ar)" ==> h: hash/id, an: autor, s: descricao, ar=quando foi atualizado.
+
+git diff-tree --name-only -r HASH ( exibe o que foi mudado nesse HASH , no lugar da palavra HASH, coloca o numero )
+
+========= Ignorar arquivo a não ser commitado ====================
+
+cd -
+touch .gitignore
+echo "*.log" > gitignore
+
+git config --global core.excludesfile ~/.gitignore
+git config --list
+
+============== Volta uma versão =======================
+git checkout README.md
+
+git reset HEAD README.md ==> tira do storage (add)
+
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+== HIT HUB === HIT HUB == HIT HUB === HIT HUB ==== HIT HUB ===========
+======================================================================
+
+---------Pegando um repositorio do Git Hub : 
+git clone URL 
+
+---------Atualiza o repositorio :
+git pull origin master URL_GITHUB
+
+---------
+
+
+
+git config –-global user.name Marcos  ==> Configurando nome para o git
+git config --global user.email mfelipesp@gmail.com ==> configurando email para o git
+git --list ==> opcoes para o git
+git init ==> inicia um repositorio para subir para o git
+git status ==> informa o status do repositorio, oq ainda não esta commitado , oq esta desatualizado , oq não foi adicionado
+git add README.md ==> adiciona oarquivo no git para o proximo comando . exemplo commit ...(work director)
+
+git commit -m "commit inicial" ==> Iniciar o commit de tudo o que estar no ADD
+
+git log ==> Historico do Git, tudo oque foi feito no Git
+
+git diff ==> sabe qual foram as mudanças 
+git diff --stage ==> sabe tudo que está no stage ( controle de versao ).
+
+para o git igonar o arquivo é necessario :
+estaremos ignorando tudo oq tiver extensao .log.
+
+cd -
+touch .gitignore
+echo "*.log" > gitignore
+
+git config --global core.excludesfile ~/.gitignore
+git config --list
+
+
+=====================x=========================
+Removendo arquivo do repositorio
+git rm script.sql
+git commit -m "removido o arquivo"
+
+====================x==========================
+Log perfeito
+
+git log --pretty=oneline(tudo em uma linha)
+git log -p -2  (ultimos dois)
+git log --pretty=format:"%H - %an : %s (%ar)" (h: hash/id, an: autor, s: descricao, ar=quando foi atualizado.
+
+git diff-tree --name-only -r HASH ( exibe o que foi mudado nesse HASH , no lugar da palavra HASH, coloca o numero )
+
+================================================
+
+git checkout README.md (da um cntrl + z )
+
+git reset HEAD README.md (tira do storage (add) )
+
+git clone URL ( para baixar o repositorio para sua pasta )
+
+git remote add origin URL_GITHUB
+
+git remote -v (onde eu peguei o projeto e aonde posso fazer o push (commit) )
+
+git pull (atualiza o arquivo)
+git pull origin master URL_GITHUB
+
+git push origin master (nome do repository e o seu branch)
