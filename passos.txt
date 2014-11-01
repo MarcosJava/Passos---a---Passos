@@ -16,6 +16,14 @@ git status
 git add Arquivo.txt   [/modo storage
 git commit -m "Esse é o primeiro commit" [/commit local
 
+===========Fazendo commit Remoto, github =======
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/MarcosJava/Passos---a---Passos.git
+git push -u origin master
+
 ============ Removendo arquivo do repositorio =====
 
 git rm script.sql
